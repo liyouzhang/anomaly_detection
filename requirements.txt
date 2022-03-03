@@ -1,0 +1,41 @@
+import pandas as pd
+
+import numpy as np
+
+import matplotlib.pyplot as plt
+
+%matplotlib inline
+
+plt.style.use('ggplot')
+
+
+pd.options.display.max_rows = 999
+
+pd.options.display.max_columns = 999
+
+df = pd.read_csv("ambient_temperature_system_failure.csv",header=0, index_col=0, parse_dates=['timestamp'])
+
+import statsmodels.api as sm
+
+from pylab import rcParams
+
+from sklearn.preprocessing import StandardScaler
+
+from sklearn.ensemble import IsolationForest
+
+from sklearn.svm import OneClassSVM
+
+from sklearn.cluster import KMeans 
+
+from sklearn.decomposition import PCA
+
+from scipy import stats
+
+from collections import Counter
+
+from sklearn.metrics import silhouette_score
+
+from time import time
+
+from sklearn.neighbors import LocalOutlierFactor
+
